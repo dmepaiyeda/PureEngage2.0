@@ -12,11 +12,12 @@
     <script type="text/javascript" src="https://mido22.github.io/MediaRecorder-sample/script.js"> </script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="./libs/mic.js"></script>
   </head>
   <body>
     <div id="app">
       <div class="header">
-        <h1>Authenticated view</h1>
+        <h1>Agent Portal</h1>
         <div class="separator"></div>
         <div class="actions">
           <button id="state-toggle">Set Ready</button>
@@ -49,23 +50,11 @@
             <button id="Retrieve">Retrieve</button>
             <button id="Release">Release</button>
           </div>
-          <div id='gUMbtn'>
-              <div>
-              Record:
-                <input type="radio" name="media" value="video" checked id='mediaVideo'>Video
-                <input type="radio" name="media" value="audio">audio
-              </div>
-              <button class="btn btn-default"  id='gUMbtn'>Request Stream</button>
-            </div>
-            <div id='btns'>
-              <button  class="btn btn-default" id='start'>Start</button>
-              <button  class="btn btn-default" id='stop'>Stop</button>
-            </div>
-            <div>
-              <ul  class="list-unstyled" id='ul'></ul>
-        </div>
+          <img src="./smile.png" height="100" width="100">
+          <h3>Your interaction with the customer was: <b style="color:greenyellow"> Excellent</b></h3>
         </div>
         <div id="logs" class="logs">
+          <span>Customer Information</span>
           <div id="logs-container"></div>
         </div>
       </div>
@@ -126,6 +115,8 @@
               break;
             case 'Established':
               setCallActions(['Hold', 'Release'])
+              startRecord();
+              console.log("Recording");
               break;
             case 'Held':
               setCallActions(['Retrieve', 'Release'])
