@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Workspace API Sample</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" "text/css" href="./fonts/PressStart2P.css"></link>
+    <link rel="stylesheet" "text/css" href="./style.css"></link>
+    <script type="text/javascript" src="./libs/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Home</h1>
+      <div class="separator"></div>
+      <button id="login">Login</button>
+    </div>
+    <script type="text/javascript">
+      // Login (on success it will redirect you to authenticated.html page)
+      login = function () {
+        window.location = '/login'
+      }
+      document.getElementById('login').addEventListener('click', () => {
+        login();
+      });
+    </script>
+  </body>
+</html>

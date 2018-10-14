@@ -16,6 +16,7 @@ import com.genesys.workspace.models.Call;
 import com.genesys.workspace.models.Dn;
 import com.genesys.workspace.models.User;
 import java.util.concurrent.CompletableFuture;
+import com.loopj.android.http.*;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -126,12 +127,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void runinBackground(){}
-    MainActivity.execute(new Runnable() {
-        @Override
-        public void run() {
-            // All your networking logic
-            // should be here
-        }
-    });
+
+
 }

@@ -33,4 +33,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     androidTestImplementation 'junit:junit:4.10'
     implementation 'com.genesys:workspace:latest.integration'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
 }
